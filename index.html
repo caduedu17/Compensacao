@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaduPlus</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(18, 18, 18, 0.9);
+            color: #f0f0f0;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #e67e22;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e67e22;
+        }
+
+        main {
+            flex: 1;
+            padding-top: 120px;
+        }
+
+        .destaques {
+            max-width: 1100px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .destaques h2 {
+            margin-bottom: 35px;
+            font-size: 42px;
+            font-weight: bold;
+            color: #e67e22;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .item {
+            background: #34495e;
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s, background 0.3s;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 0.6s forwards;
+        }
+
+        .item:hover {
+            transform: translateY(-8px);
+            background: #e67e22;
+        }
+
+        .item h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .item p {
+            color: #ecf0f1;
+        }
+
+        .item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #e67e22, #f39c12);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .item a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        footer {
+            background: rgba(18, 18, 18, 0.9);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">CaduPlus</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="precos.html">Assinar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destaques">
+            <h2>Destaques</h2>
+            <div class="grid">
+                <div class="item">
+                    <h3><a href="filmes.html">Filmes</a></h3>
+                    <p>Os melhores lançamentos e clássicos do cinema.</p>
+                </div>
+                <div class="item">
+                    <h3><a href="series.html">Séries</a></h3>
+                    <p>Séries para todos os gostos, de drama a comédia.</p>
+                </div>
+                <div class="item">
+                    <h3><a href="animes.html">Animes</a></h3>
+                    <p>Os animes mais populares e novos episódios.</p>
+                </div>
+                <div class="item">
+                    <h3><a href="doramas.html">Doramas</a></h3>
+                    <p>Doramas que emocionam e cativam.</p>
+                </div>
+                <div class="item">
+                    <h3><a href="desenhos.html">Desenhos</a></h3>
+                    <p>Desenhos animados para todas as idades.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 CaduPlus. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
